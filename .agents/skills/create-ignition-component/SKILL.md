@@ -171,6 +171,12 @@ interface StatusBadgeProps {
   tone: string;
 }
 
+export const StatusBadgeComponent = (
+  props: ComponentProps<StatusBadgeProps>,
+) => {
+  return <div {...props.emit()}>{props.props.text}</div>;
+};
+
 export class StatusBadgeComponentMeta implements ComponentMeta {
   getComponentType(): string {
     return COMPONENT_TYPE;
