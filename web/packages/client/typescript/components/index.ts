@@ -1,0 +1,1 @@
+export { ToastSileoComponentMeta } from "./ToastSileo";

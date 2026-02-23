@@ -1,0 +1,11 @@
+services:
+  builder:
+    image: eclipse-temurin:17-jdk
+    user: "${CURRENT_UID:-1000}:${CURRENT_GID:-1000}"
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    environment:
+      - HOME=/workspace
+      - GRADLE_USER_HOME=/workspace/.gradle
+    command: ["./gradlew", "build", "--no-daemon"]

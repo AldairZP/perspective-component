@@ -1,0 +1,65 @@
+{
+    "type": "object",
+    "properties": {
+        "trigger": {
+            "type": "boolean",
+            "description": "Trigger used to fire a new toast when value changes.",
+            "default": false
+        },
+        "type": {
+            "type": "string",
+            "description": "Toast notification type.",
+            "default": "info",
+            "enum": [
+                "success",
+                "info",
+                "warning",
+                "error",
+                "show"
+            ]
+        },
+        "title": {
+            "type": "string",
+            "description": "Toast title.",
+            "default": "title"
+        },
+        "description": {
+            "type": "string",
+            "description": "Toast description.",
+            "default": "description"
+        },
+        "position": {
+            "type": "string",
+            "description": "Toast container position.",
+            "default": "bottom-right",
+            "enum": [
+                "bottom-center",
+                "bottom-left",
+                "bottom-right",
+                "top-center",
+                "top-left",
+                "top-right"
+            ]
+        },
+        "theme": {
+            "type": "string",
+            "description": "Toast visual theme.",
+            "default": "light",
+            "enum": [
+                "light",
+                "dark"
+            ]
+        },
+        "duration": {
+            "type": "number",
+            "description": "Milliseconds before toast auto closes.",
+            "default": 4000
+        },
+        "style": {
+            "$ref": "urn:ignition-schema:schemas/style-properties.schema.json",
+            "default": {
+                "classes": ""
+            }
+        }
+    }
+}
